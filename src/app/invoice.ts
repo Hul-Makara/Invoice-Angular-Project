@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class Invoice {
   company = {
-    name: 'Lucky DFI',
+    name: 'Hul Makara Mart',
     address: '2004 St, SenSok, Cambodia',
     message: 'Open 7/24\nThank you for your business!',
   };
