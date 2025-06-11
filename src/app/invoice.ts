@@ -28,21 +28,19 @@ export class Invoice {
       { name: 'Fish', price: 0.9 },
       { name: 'Beef', price: 10.0 },
       { name: 'Onion', price: 1.25 },
-      { name: 'Cheese', price: 5.4 },
+      { name: 'Cheese', price: 3.4 },
     ],
     tax: 2.89,
-    total: 29.69,
     barcode: '123456778963578021',
   };
 
-  get subtotal() {
-    return this.receipt.items.reduce((sum, item) => sum + item.price, 0);
+  get subtotal(): number {
+    return parseFloat(
+      this.receipt.items.reduce((sum, item) => sum + item.price, 0).toFixed(2)
+    );
   }
-  get itemsSum() {
-    // List of item names to include in the sum
-    const included = ['Orange Juice', 'Apples', 'Tomato', 'Fish', 'Beef'];
-    return this.receipt.items
-      .filter((item) => included.includes(item.name))
-      .reduce((sum, item) => sum + item.price, 0);
+
+  get total(): number {
+    return parseFloat((this.subtotal + this.receipt.tax).toFixed(2));
   }
 }

@@ -1,4 +1,3 @@
-<!-- Receipt container -->
 <div class="receipt-container">
   <!-- Header with company info -->
   <div class="receipt-header">
@@ -28,17 +27,21 @@
   </div>
 
   <!-- Totals section -->
-  <div class="receipt-totals">
-    <div class="total-row">
-      <span class="label">Tax</span>
-      <span class="value">${{ receipt.tax | number:'1.2-2' }}</span>
-    </div>
-    <div class="total-row">
-      <span class="label">TOTAL</span>
-      <span class="value">${{ receipt.total | number:'1.2-2' }}</span>
-    </div>
+  <!-- Totals section -->
+<div class="receipt-totals">
+  <div class="total-row">
+    <span class="label">SUBTOTAL</span>
+    <span class="value">${{ subtotal }}</span>
   </div>
-
+  <div class="total-row">
+    <span class="label">TAX</span>
+    <span class="value">${{ receipt.tax | number:'1.2-2' }}</span>
+  </div>
+  <div class="total-row">
+    <span class="label">TOTAL</span>
+    <span class="value">${{ total }}</span>
+  </div>
+</div>
   <!-- Footer with thank you and barcode -->
   <div class="receipt-footer">
     <p>THANK YOU</p>
