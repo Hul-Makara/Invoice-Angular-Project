@@ -22,7 +22,7 @@ export class Invoice {
       year: 'numeric',
     }),
     items: [
-      { name: 'Orange Juice', price: 32.15 },
+      { name: 'Orange Juice', price: 33.15 },
       { name: 'Apples', price: 3.5 },
       { name: 'Tomato', price: 2.4 },
       { name: 'Fish', price: 0.9 },
